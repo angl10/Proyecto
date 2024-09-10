@@ -1,0 +1,64 @@
+:root{
+    --blanco: #ffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #26939f;
+    --gris: #757575;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+}
+/* Lo de arriba es comoo la medida estandar para uniformidad de texto entre los navegadores*/
+
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+}
+/*comentarios/*
+/*el punto hace referencias a las clases*/
+
+.titulo span{
+    font-size: 2rem;
+}
+.navegacion-principal{
+    background-color: var(--secundario);
+    /*pading es por dentro, margin es por fuera*/
+
+    display: flex;/* Flex box esta disenado para alinear elementos en tus disenos.
+    Existi una proviedad de este que se llama "justufy-content" para filas// alig-items es para columnas (flex-direction)*/
+    justify-content: space-between;
+    font-weight: bold;/*para poner en color negrita un estilo*/
+    font-size: 2rem;
+}
+.navegacion-principal a:hover{/*el hover es para poner el cursor en el hipervinculo reaccione o haga algo, en este caso que cambie de color*/
+    background-color: var(--primario);
+    color: var(--oscuro);
+
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;/*remueve el estilo subrayado del texto que trae por defualt el nav */
+    padding: 1rem;
+}
+/* si por ejemplo tendria otro .navegacion donde configure el color del backroud de nuevo, el navegador tomara por preferido el que este 
+mas especifico o mas definido*/
+
+/* rem es una unidad de medida en CSS 1 rem es = 10pix */
+.contenedor{
+    
+    width: 120rem;
+    margin: 0 auto;
+
+    /*otra forma de hacer lo de arriba mas personalizada es:
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto; */
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
