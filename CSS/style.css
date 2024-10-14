@@ -12,7 +12,35 @@ html{
 body{
     font-size: 16px;
 }
-/* Lo de arriba es comoo la medida estandar para uniformidad de texto entre los navegadores*/
+
+
+/* Se aplica desde 0 pixeles */
+body{
+    background-color: bisque;
+}
+
+/*Recomendado
+480px para móviles
+768px para tablets
+*/
+
+@media(min-width: 480px){
+    body{
+        background-color: blue;
+    }
+}
+
+@media(min-width: 768px){
+    body{
+        background-color: cornflowerblue;
+    }
+}
+
+
+
+
+
+
 
 .titulo{
     text-align: center;
@@ -33,7 +61,19 @@ body{
     justify-content: space-between;
     font-weight: bold;/*para poner en color negrita un estilo*/
     font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
 }
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+}
+
+
 .navegacion-principal a:hover{/*el hover es para poner el cursor en el hipervinculo reaccione o haga algo, en este caso que cambie de color*/
     background-color: var(--primario);
     color: var(--oscuro);
@@ -61,4 +101,10 @@ mas especifico o mas definido*/
 }
 .nav-bg{
     background-color: var(--secundario);
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat; /*Sirve para evitar la repetición cuando es peqeuña*/
+    background-size: cover; /*Para que la imagen se ajuste al tamaño del contenedor*/
 }
